@@ -54,7 +54,7 @@ public class MyMath {
     }
 
     public static double cos(double x, int accuracy) {
-        return sin(x - Math.PI / 2, accuracy);
+        return sin(x + Math.PI / 2, accuracy);
     }
 
     public static double tan(double x, int accuracy) {
