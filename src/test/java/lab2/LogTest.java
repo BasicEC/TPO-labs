@@ -17,6 +17,7 @@ import static org.junit.runners.Parameterized.*;
 public class LogTest extends Assert {
     private static final double delta = 0.001;
     private static final IMyMath myMath = new MyMath();
+    private static final IMyMath testMath = new MyTestMath();
 
     @Parameter
     public IMathFunc myFunc;
@@ -29,16 +30,16 @@ public class LogTest extends Assert {
         IMathFunc myLn = (x) -> myMath.ln(x, delta);
         IMathFunc expectLn = Math::log;
 
-        IMathFunc myLog10 = (x) -> myMath.log10(x, delta);
+        IMathFunc myLog10 = (x) -> testMath.log10(x, delta);
         IMathFunc expectLog10 = Math::log10;
 
-        IMathFunc myLog5 = (x) -> myMath.log5(x, delta);
+        IMathFunc myLog5 = (x) -> testMath.log5(x, delta);
         IMathFunc expectLog5 = (x) -> Math.log(x) / Math.log(5);
 
-        IMathFunc myLog3 = (x) -> myMath.log3(x, delta);
+        IMathFunc myLog3 = (x) -> testMath.log3(x, delta);
         IMathFunc expectLog3 = (x) -> Math.log(x) / Math.log(3);
 
-        IMathFunc myLog2 = (x) -> myMath.log2(x, delta);
+        IMathFunc myLog2 = (x) -> testMath.log2(x, delta);
         IMathFunc expectLog2 = (x) -> Math.log(x) / Math.log(2);
 
         Object[][] data = new Object[][]{{myLn, expectLn}, {myLog10, expectLog10}, {myLog5, expectLog5}, {myLog3, expectLog3}, {myLog2, expectLog2}};
@@ -49,40 +50,16 @@ public class LogTest extends Assert {
     public void TestEValue() { testFunction(Math.E); }
 
     @Test
-    public void Test56PiValue() { testFunction(Math.PI * 5 / 6); }
+    public void Test56EValue() { testFunction(Math.E * 5 / 6); }
 
     @Test
-    public void Test23PiValue() { testFunction(Math.PI * 2 / 3); }
+    public void Test23EValue() { testFunction(Math.E * 2 / 3); }
 
     @Test
-    public void Test12PiValue() { testFunction(Math.PI / 2); }
-
-    @Test
-    public void Test13PiValue() { testFunction(Math.PI / 3); }
-
-    @Test
-    public void Test16PiValue() { testFunction(Math.PI / 6); }
+    public void Test2EValue() { testFunction(Math.pow(Math.E, 2)); }
 
     @Test
     public void Test0Value() { testFunction(0); }
-
-    @Test
-    public void TestMinus16PiValue() { testFunction(-1 * Math.PI / 6); }
-
-    @Test
-    public void TestMinus13PiValue() { testFunction(-1 * Math.PI / 3); }
-
-    @Test
-    public void TestMinus12PiValue() { testFunction(-1 * Math.PI / 2); }
-
-    @Test
-    public void TestMinus23PiValue() { testFunction(-1 * Math.PI * 2 / 3); }
-
-    @Test
-    public void TestMinus56PiValue() { testFunction(-1 * Math.PI * 5 / 6); }
-
-    @Test
-    public void TestMinusPiValue() { testFunction(-1 * Math.PI); }
 
     @Test
     public void Test10Value() { testFunction(10); }
@@ -91,16 +68,7 @@ public class LogTest extends Assert {
     public void Test100Value() { testFunction(100); }
 
     @Test
-    public void Test1000Value() { testFunction(1000); }
-
-    @Test
     public void TestMinus10Value() { testFunction(-10); }
-
-    @Test
-    public void TestMinus100Value() { testFunction(-100); }
-
-    @Test
-    public void TestMinus1000Value() { testFunction(-1000); }
 
     @Test
     public void Test001Value() { testFunction(0.001); }
