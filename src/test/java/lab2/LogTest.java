@@ -34,124 +34,64 @@ public class LogTest extends Assert {
     }
 
     @Test
-    public void TestEValue() {
-        double value = Math.E;
-        testFunction(value);
-    }
+    public void TestEValue() { testFunction(Math.E); }
 
     @Test
-    public void Test56PiValue() {
-        double value = Math.PI * 5 / 6;
-        testFunction(value);
-    }
+    public void Test56PiValue() { testFunction(Math.PI * 5 / 6); }
 
     @Test
-    public void Test23PiValue() {
-        double value = Math.PI * 2 / 3;
-        testFunction(value);
-    }
+    public void Test23PiValue() { testFunction(Math.PI * 2 / 3); }
 
     @Test
-    public void Test12PiValue() {
-        double value = Math.PI / 2;
-        testFunction(value);
-    }
+    public void Test12PiValue() { testFunction(Math.PI / 2); }
 
     @Test
-    public void Test13PiValue() {
-        double value = Math.PI / 3;
-        testFunction(value);
-    }
+    public void Test13PiValue() { testFunction(Math.PI / 3); }
 
     @Test
-    public void Test16PiValue() {
-        double value = Math.PI / 6;
-        testFunction(value);
-    }
+    public void Test16PiValue() { testFunction(Math.PI / 6); }
 
     @Test
-    public void Test0Value() {
-        double value = 0;
-        testFunction(value);
-    }
+    public void Test0Value() { testFunction(0); }
 
     @Test
-    public void TestMinus16PiValue() {
-        double value = -1 * Math.PI / 6;
-        testFunction(value);
-    }
+    public void TestMinus16PiValue() { testFunction(-1 * Math.PI / 6); }
 
     @Test
-    public void TestMinus13PiValue() {
-        double value = -1 * Math.PI / 3;
-        testFunction(value);
-    }
+    public void TestMinus13PiValue() { testFunction(-1 * Math.PI / 3); }
 
     @Test
-    public void TestMinus12PiValue() {
-        double value = -1 * Math.PI / 2;
-        testFunction(value);
-    }
+    public void TestMinus12PiValue() { testFunction(-1 * Math.PI / 2); }
 
     @Test
-    public void TestMinus23PiValue() {
-        double value = -1 * Math.PI * 2 / 3;
-        testFunction(value);
-    }
+    public void TestMinus23PiValue() { testFunction(-1 * Math.PI * 2 / 3); }
 
     @Test
-    public void TestMinus56PiValue() {
-        double value = -1 * Math.PI * 5 / 6;
-        testFunction(value);
-    }
+    public void TestMinus56PiValue() { testFunction(-1 * Math.PI * 5 / 6); }
 
     @Test
-    public void TestMinusPiValue() {
-        double value = -1 * Math.PI;
-        testFunction(value);
-    }
+    public void TestMinusPiValue() { testFunction(-1 * Math.PI); }
 
     @Test
-    public void Test10Value() {
-        double value = 10;
-        testFunction(value);
-    }
+    public void Test10Value() { testFunction(10); }
 
     @Test
-    public void Test100Value() {
-        double value = 100;
-        testFunction(value);
-    }
+    public void Test100Value() { testFunction(100); }
 
     @Test
-    public void Test1000Value() {
-        double value = 1000;
-        testFunction(value);
-    }
+    public void Test1000Value() { testFunction(1000); }
 
     @Test
-    public void TestMinus10Value() {
-        double value = -10;
-        testFunction(value);
-    }
+    public void TestMinus10Value() { testFunction(-10); }
 
     @Test
-    public void TestMinus100Value() {
-        double value = -100;
-        testFunction(value);
-    }
+    public void TestMinus100Value() { testFunction(-100); }
 
     @Test
-    public void TestMinus1000Value() {
-        double value = -1000;
-        testFunction(value);
-    }
+    public void TestMinus1000Value() { testFunction(-1000); }
 
     @Test
-    public void TestNaNValue() {
-        double value = NaN;
-        testFunction(value);
-    }
+    public void TestNaNValue() { testFunction(NaN); }
 
     private void testFunction(double testValue){
         double expected = expectedFunc.func(testValue);
