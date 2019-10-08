@@ -36,160 +36,126 @@ public class LogTest extends Assert {
     @Test
     public void TestEValue() {
         double value = Math.E;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test56PiValue() {
         double value = Math.PI * 5 / 6;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test23PiValue() {
         double value = Math.PI * 2 / 3;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test12PiValue() {
         double value = Math.PI / 2;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test13PiValue() {
         double value = Math.PI / 3;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test16PiValue() {
         double value = Math.PI / 6;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test0Value() {
         double value = 0;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus16PiValue() {
         double value = -1 * Math.PI / 6;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus13PiValue() {
         double value = -1 * Math.PI / 3;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus12PiValue() {
         double value = -1 * Math.PI / 2;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus23PiValue() {
         double value = -1 * Math.PI * 2 / 3;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus56PiValue() {
         double value = -1 * Math.PI * 5 / 6;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinusPiValue() {
         double value = -1 * Math.PI;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test10Value() {
         double value = 10;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test100Value() {
         double value = 100;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void Test1000Value() {
         double value = 1000;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus10Value() {
         double value = -10;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus100Value() {
         double value = -100;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestMinus1000Value() {
         double value = -1000;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
-        assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
+        testFunction(value);
     }
 
     @Test
     public void TestNaNValue() {
         double value = NaN;
-        double expected = expectedFunc.func(value);
-        double actual = myFunc.func(value);
+        testFunction(value);
+    }
+
+    private void testFunction(double testValue){
+        double expected = expectedFunc.func(testValue);
+        double actual = myFunc.func(testValue);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
