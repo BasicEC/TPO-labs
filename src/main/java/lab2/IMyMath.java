@@ -35,6 +35,6 @@ public interface IMyMath {
     }
 
     default double sec(double x, int accuracy) {
-        return 1 / sin(x, accuracy);
+        return 1 / cos(x, accuracy);
     }
 }
