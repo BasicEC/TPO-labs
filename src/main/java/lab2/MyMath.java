@@ -21,7 +21,7 @@ public class MyMath {
         return ln(x, acc) / ln(base, acc);
     }
 
-    public static double sin(double x) {
+    public static double sin(double x, int accuracy) {
         x = normalizeInput(x);
         double result = 0;
         for (int i = 1; i < 10; i++) {
@@ -31,6 +31,18 @@ public class MyMath {
             result += sign * val / factorial;
         }
         return result;
+    }
+
+    public static double cos(double x, int accuracy){
+        return sin(x - Math.PI/2, accuracy);
+    }
+
+    public static double tan(double x, int accuracy){
+        return sin(x,accuracy)/cos(x, accuracy);
+    }
+
+    public static double sec(double x, int accuracy){
+        return 1/cos(x,accuracy);
     }
 
     private static long factorial(int x) {
