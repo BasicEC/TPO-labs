@@ -20,6 +20,7 @@ public class SinusTest extends Assert {
      */
     private static final double delta = 0.001;
     private static final int deltaPow = 4;
+    private static final IMyMath myMath = new MyMath();
 
     @Parameter
     public IMathFunc myFunc;
@@ -29,7 +30,7 @@ public class SinusTest extends Assert {
 
     @Parameters
     public static Collection<Object[]> TestData() {
-        IMathFunc mySin =(x) -> MyMath.sin(x,deltaPow);
+        IMathFunc mySin =(x) -> myMath.sin(x,deltaPow);
         IMathFunc expectSin = Math::sin;
 
         Object[][] data = new Object[][]{{mySin, expectSin}};

@@ -20,6 +20,7 @@ public class TanTest extends Assert {
      */
     private static final double delta = 0.001;
     private static final int deltaPow = 4;
+    private static final IMyMath myMath = new MyMath();
 
     @Parameter
     public IMathFunc myFunc;
@@ -29,7 +30,7 @@ public class TanTest extends Assert {
 
     @Parameters
     public static Collection<Object[]> TestData() {
-        IMathFunc myTan =(x) -> MyMath.tan(x,deltaPow);
+        IMathFunc myTan =(x) -> myMath.tan(x,deltaPow);
         IMathFunc expectTan = Math::tan;
 
         Object[][] data = new Object[][]{{myTan, expectTan}};

@@ -16,6 +16,7 @@ import static org.junit.runners.Parameterized.*;
 @RunWith(Parameterized.class)
 public class LogTest extends Assert {
     private static final double delta = 0.001;
+    private static final IMyMath myMath = new MyMath();
 
     @Parameter
     public IMathFunc myFunc;
@@ -25,19 +26,19 @@ public class LogTest extends Assert {
 
     @Parameters
     public static Collection<Object[]> TestData() {
-        IMathFunc myLn = (x) -> MyMath.ln(x, delta);
+        IMathFunc myLn = (x) -> myMath.ln(x, delta);
         IMathFunc expectLn = Math::log;
 
-        IMathFunc myLog10 = (x) -> MyMath.log10(x, delta);
+        IMathFunc myLog10 = (x) -> myMath.log10(x, delta);
         IMathFunc expectLog10 = Math::log10;
 
-        IMathFunc myLog5 = (x) -> MyMath.log5(x, delta);
+        IMathFunc myLog5 = (x) -> myMath.log5(x, delta);
         IMathFunc expectLog5 = (x) -> Math.log(x) / Math.log(5);
 
-        IMathFunc myLog3 = (x) -> MyMath.log3(x, delta);
+        IMathFunc myLog3 = (x) -> myMath.log3(x, delta);
         IMathFunc expectLog3 = (x) -> Math.log(x) / Math.log(3);
 
-        IMathFunc myLog2 = (x) -> MyMath.log2(x, delta);
+        IMathFunc myLog2 = (x) -> myMath.log2(x, delta);
         IMathFunc expectLog2 = (x) -> Math.log(x) / Math.log(2);
 
         Object[][] data = new Object[][]{{myLn, expectLn}, {myLog10, expectLog10}, {myLog5, expectLog5}, {myLog3, expectLog3}, {myLog2, expectLog2}};

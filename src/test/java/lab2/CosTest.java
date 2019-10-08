@@ -20,6 +20,7 @@ public class CosTest extends Assert {
      */
     private static final double delta = 0.001;
     private static final int deltaPow = 4;
+    private static final IMyMath myMath = new MyMath();
 
     @Parameter
     public IMathFunc myFunc;
@@ -29,7 +30,7 @@ public class CosTest extends Assert {
 
     @Parameters
     public static Collection<Object[]> TestData() {
-        IMathFunc myCos =(x) -> MyMath.cos(x,deltaPow);
+        IMathFunc myCos =(x) -> myMath.cos(x,deltaPow);
         IMathFunc expectCos = Math::cos;
 
         Object[][] data = new Object[][]{{myCos, expectCos}};

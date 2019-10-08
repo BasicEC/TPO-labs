@@ -1,8 +1,8 @@
 package lab2;
 
-public class MyMath {
+public class MyMath implements IMyMath {
 
-    public static double ln(double x, double accuracy) {
+    public double ln(double x, double accuracy) {
         accuracy = Math.abs(accuracy);
         if (x < 0) return Double.NaN;
         if (x == 0) return Double.NEGATIVE_INFINITY;
@@ -20,28 +20,7 @@ public class MyMath {
         return -2 * result;
     }
 
-    public static double log(double base, double x, double accuracy) {
-        double acc = accuracy / 2;
-        return ln(x, acc) / ln(base, acc);
-    }
-
-    public static double log10(double x, double accuracy) {
-        return log(10, x, accuracy);
-    }
-
-    public static double log5(double x, double accuracy) {
-        return log(5, x, accuracy);
-    }
-
-    public static double log3(double x, double accuracy) {
-        return log(3, x, accuracy);
-    }
-
-    public static double log2(double x, double accuracy) {
-        return log(2, x, accuracy);
-    }
-
-    public static double sin(double x, int accuracy) {
+    public double sin(double x, int accuracy) {
         x = normalizeInput(x);
         double result = 0;
         for (int i = 1; i < 10; i++) {
@@ -53,26 +32,14 @@ public class MyMath {
         return result;
     }
 
-    public static double cos(double x, int accuracy) {
-        return sin(x + Math.PI / 2, accuracy);
-    }
-
-    public static double tan(double x, int accuracy) {
-        return sin(x, accuracy) / cos(x, accuracy);
-    }
-
-    public static double sec(double x, int accuracy) {
-        return 1 / cos(x, accuracy);
-    }
-
-    private static long factorial(int x) {
+    private long factorial(int x) {
         long result = 1;
         for (int i = 1; i <= x; i++)
             result *= i;
         return result == 0 ? 1 : result;
     }
 
-    private static double normalizeInput(double x) {
+    private double normalizeInput(double x) {
         if (x >= Math.PI * -1 && x <= Math.PI)
             return x;
         int koef = (int) (Math.abs(x) / (Math.PI * 2)) + 1;
