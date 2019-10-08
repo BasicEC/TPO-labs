@@ -1,3 +1,5 @@
+package lab2;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,7 +16,7 @@ public class SinusTest extends Assert {
     public void TestPiValue(){
         double value = Math.PI;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -22,7 +24,7 @@ public class SinusTest extends Assert {
     public void Test56PiValue(){
         double value = Math.PI * 5 /6;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -30,7 +32,7 @@ public class SinusTest extends Assert {
     public void Test23PiValue(){
         double value = Math.PI * 2 / 3;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -38,7 +40,7 @@ public class SinusTest extends Assert {
     public void Test12PiValue(){
         double value = Math.PI / 2;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -46,7 +48,7 @@ public class SinusTest extends Assert {
     public void Test13PiValue(){
         double value = Math.PI / 3;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -54,7 +56,7 @@ public class SinusTest extends Assert {
     public void Test16PiValue(){
         double value = Math.PI / 6;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -62,7 +64,7 @@ public class SinusTest extends Assert {
     public void Test0Value(){
         double value = 0;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -70,7 +72,7 @@ public class SinusTest extends Assert {
     public void TestMinus16PiValue(){
         double value = -1 * Math.PI /6;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -78,7 +80,7 @@ public class SinusTest extends Assert {
     public void TestMinus13PiValue(){
         double value = -1 * Math.PI / 3;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -86,7 +88,7 @@ public class SinusTest extends Assert {
     public void TestMinus12PiValue(){
         double value = -1 * Math.PI / 2;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -94,7 +96,7 @@ public class SinusTest extends Assert {
     public void TestMinus23PiValue(){
         double value = -1 * Math.PI * 2 / 3;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -102,7 +104,7 @@ public class SinusTest extends Assert {
     public void TestMinus56PiValue(){
         double value = -1 * Math.PI * 5 / 6;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -110,7 +112,7 @@ public class SinusTest extends Assert {
     public void TestMinusPiValue(){
         double value = -1 * Math.PI;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -118,7 +120,7 @@ public class SinusTest extends Assert {
     public void Test10Value(){
         double value = 10;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -126,7 +128,7 @@ public class SinusTest extends Assert {
     public void Test100Value(){
         double value = 100;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -134,7 +136,7 @@ public class SinusTest extends Assert {
     public void Test1000Value(){
         double value = 1000;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -142,7 +144,7 @@ public class SinusTest extends Assert {
     public void TestMinus10Value(){
         double value = -10;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -150,7 +152,7 @@ public class SinusTest extends Assert {
     public void TestMinus100Value(){
         double value = -100;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -158,7 +160,7 @@ public class SinusTest extends Assert {
     public void TestMinus1000Value(){
         double value = -1000;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
@@ -166,7 +168,7 @@ public class SinusTest extends Assert {
     public void TestNaNValue(){
         double value = NaN;
         double expected = Math.sin(value);
-        double actual = Sinus.sin(value);
+        double actual = MyMath.sin(value);
         assertEquals(assertMessage(expected, actual, delta, true), expected, actual, delta);
     }
 
