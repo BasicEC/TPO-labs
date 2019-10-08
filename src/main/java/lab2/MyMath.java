@@ -3,10 +3,13 @@ package lab2;
 public class MyMath {
 
     public static double ln(double x, int accuracy) {
+        long n = accuracy * 5;
+        if (x < 0) return Double.NaN;
+        if (x == 0) return Double.NEGATIVE_INFINITY;
         x = (1 - x) / (1 + x);
         double result = 0;
 
-        for (int i = 1; i <= accuracy * 4; i += 2) {
+        for (long i = 1; i <= n; i += 2) {
             double pow = Math.pow(x, i);
             result += pow / i;
         }
