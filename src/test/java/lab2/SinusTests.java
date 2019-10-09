@@ -2,16 +2,9 @@ package lab2;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
-
-import java.util.Arrays;
-import java.util.Collection;
 
 import static java.lang.Double.NaN;
-
-import static org.junit.runners.Parameterized.*;
 
 public class SinusTests extends Assert {
     /*

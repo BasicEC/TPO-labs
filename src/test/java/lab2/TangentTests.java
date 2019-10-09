@@ -46,9 +46,7 @@ public class TangentTests extends Assert {
     }
 
     @Test
-    public void Test0Value() {
-        testFunction(0);
-    }
+    public void Test0Value() { testFunction(0); }
 
     @Test
     public void TestMinus16PiValue() {

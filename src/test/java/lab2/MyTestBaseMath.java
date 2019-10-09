@@ -7,7 +7,7 @@ import static java.lang.Math.*;
 
 public class MyTestBaseMath implements IMyMath {
 
-    private static HashMap<Double, Double> lnMap = new HashMap<Double, Double>() {{
+    protected static HashMap<Double, Double> lnMap = new HashMap<Double, Double>() {{
         put(E, Math.log(E));
         put(E * 5 / 6, Math.log(E * 5 / 6));
         put(E * 2 / 3, Math.log(E * 2 / 3));
@@ -21,9 +21,11 @@ public class MyTestBaseMath implements IMyMath {
         put(2D, Math.log(2));
         put(3D, Math.log(3));
         put(5D, Math.log(5));
+        put(7D, Math.log(7));
+
     }};
 
-    private static HashMap<Double, Double> sinMap = new HashMap<Double, Double>() {{
+    protected static HashMap<Double, Double> sinMap = new HashMap<Double, Double>() {{
         put(PI, Math.sin(PI));
         put(PI * 5 / 6, Math.sin(PI * 5 / 6));
         put(PI * 2 / 3, Math.sin(PI * 2 / 3));
@@ -47,6 +49,9 @@ public class MyTestBaseMath implements IMyMath {
         put(-1000D, Math.sin(-1000));
 
         put(NaN, Math.sin(NaN));
+
+        put(-1D, Math.sin(-1));
+        put(-3D, Math.sin(-3));
     }};
 
     static {
