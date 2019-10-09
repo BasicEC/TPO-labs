@@ -16,11 +16,10 @@ public class MyMath implements IMyMath {
             delta = 4 * x / (i + 1);
             i += 2;
         }
-
         return -2 * result;
     }
 
-    public double sin(double x, int accuracy) {
+    public double sin(double x, double accuracy) {
         x = normalizeInput(x);
         double result = 0;
         for (int i = 1; i < 10; i++) {

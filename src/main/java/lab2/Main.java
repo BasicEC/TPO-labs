@@ -2,14 +2,25 @@ package lab2;
 
 public class Main {
     public static void main(String[] args) {
-        double[] X = new double[]{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
-        double[] Y = new double[10];
-        IMyMath myMath = new MyMath();
-        for (int i = 0; i < X.length; i++) {
-            Y[i] = myMath.ln(X[i], 0.01);
-        }
+//        double[] X = new double[]{0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
+//        double[] Y = new double[10];
+//        IMyMath myMath = new MyMath();
+//        for (int i = 0; i < X.length; i++) {
+//            Y[i] = myMath.ln(X[i], 0.01);
+//        }
+//
+//        ChartCreater cc = new ChartCreater();
+//        cc.createChart(X, Y);
 
-        ChartCreater cc = new ChartCreater();
-        cc.createChart(X, Y);
+        MyFunc func = new MyFunc();
+        System.out.println(func.Calculate(3));
     }
 }
+// 10 - -2.21244646972901314638449288339980706745873859786886945838
+// 7 - -1.77842818546092804768455058371873132502937251004530808642
+// 3 - -0.11108452210542353055289939283888610598281021981638900849
+// 2 - 1.739325373218505161962262119325724427587194470596153327660
+// -1 - 65.32243119472846765617594295716528227171828909879361798362
+// -3 - 4.229121015534647170235267416686908949224961573314789317288
+// -10 - 6.631422271364938847539049419951029042869195789303523200360
+// -100 - 0.032676475532107323521510341153799390478063137500473747578

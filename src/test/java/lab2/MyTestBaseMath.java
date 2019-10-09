@@ -5,7 +5,7 @@ import java.util.HashMap;
 import static java.lang.Double.NaN;
 import static java.lang.Math.*;
 
-public class MyTestMath implements IMyMath {
+public class MyTestBaseMath implements IMyMath {
 
     private static HashMap<Double, Double> lnMap = new HashMap<Double, Double>() {{
         put(E, Math.log(E));
@@ -68,7 +68,7 @@ public class MyTestMath implements IMyMath {
     }
 
     @Override
-    public double sin(double x, int accuracy) {
+    public double sin(double x, double accuracy) {
         try {
             return sinMap.get(x);
         } catch (Exception e) {
